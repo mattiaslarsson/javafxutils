@@ -1,5 +1,5 @@
 # javafxutils
-Utilities for JavaFX Applications
+## Utilities for JavaFX Applications
 
 - Extend the class JavaFXUtils
 - Declare your Nodes as fields and annotate them with @Draggable
