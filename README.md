@@ -2,8 +2,8 @@
 ## Utilities for JavaFX Applications
 
 - Extend the class JavaFXUtils
-- Declare your Nodes as fields and annotate them with @Draggable
-- Override the method instantiateFields where you instantiate your nodes
-- In the method start(Stage primaryStage) you call super.run(this)
-- Then you can make your Prent, Scene and Stage as usual
+- Declare your Nodes as fields and annotate them with <code>@Draggable</code>
+- Override the method <code>instantiateFields()</code> where you instantiate your nodes
+- In the method <code>start(Stage primaryStage)</code> you call <code>super.run(this)</code>
+- Then you can make your Parent, Scene and Stage as usual
 
