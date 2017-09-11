@@ -2,26 +2,35 @@ package to.mattias.utils;
 
 import javafx.scene.Cursor;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.layout.Region;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public final class Nodes {
 
   private static boolean isDragging = false;
   private static double dX, dY, mouseX, mouseY, nodeX, nodeY;
-  private static Set<Node> nodes = new HashSet<>();
 
   private Nodes() {}
 
   public static void makeDraggable(Node node) {
-    System.out.println("Making " + node + " draggable");
-    nodes.add(node);
     addDragListener(node);
   }
 
-  public static void makeScalable(Node node) {
-    System.out.println(String.format("Making %s scalable", node));
+  public static void makeScalable(Region parent) {
+
+    List<Node> children = parent.getChildrenUnmodifiable();
+    for (int i = children.size() - 1; i >= 0; i--) {
+      if (children.get(i).getLayoutBounds().getMaxX() >= parent.getLayoutBounds().getMaxX()) {
+        children.forEach(node -> {
+          node.setScaleX(0.9);
+          node.setScaleY(0.9);
+        });
+      }
+    }
   }
 
   private static void addDragListener(Node node) {
