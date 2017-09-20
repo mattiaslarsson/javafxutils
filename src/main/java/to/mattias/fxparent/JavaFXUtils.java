@@ -7,7 +7,7 @@ public abstract class JavaFXUtils extends Application {
 
   public abstract void instantiateFields();
 
-  public static void run(JavaFXUtils instance) throws IllegalAccessException {
+  public static void run(JavaFXUtils instance) {
     Annotations.check(instance);
   }
 

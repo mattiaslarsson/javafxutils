@@ -1,6 +1,5 @@
 package to.mattias.fxparent;
 
-import javafx.application.Application;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import to.mattias.annotations.Draggable;
@@ -19,7 +18,7 @@ class Annotations {
    * @param instance Instance of JavaFXUtils extended class
    * @throws IllegalAccessException
    */
-  static void check(JavaFXUtils instance) throws IllegalAccessException {
+  static void check(JavaFXUtils instance) {
 
     instance.instantiateFields();
     Field[] fields = instance.getClass().getDeclaredFields();
